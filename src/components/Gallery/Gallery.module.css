@@ -1,0 +1,14 @@
+.gallery {
+  list-style: none;
+  display: grid;
+  max-width: 1440px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery_item:hover .fullscreen_button,
+.gallery_item:focus .fullscreen_button {
+  opacity: 1;
+}
