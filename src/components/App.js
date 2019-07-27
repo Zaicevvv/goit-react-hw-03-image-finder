@@ -44,8 +44,10 @@ export default class App extends Component {
   }
 
   onSearchForm = value => {
-    this.setState({ query: value, pictures: [] }, () => {
-      this.fetchImage(value);
+    const { query } = value;
+
+    this.setState({ query, pictures: [], pageNumber: 1 }, () => {
+      this.fetchImage(query);
     });
   };
 
